@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -Ar | wc -l
+ls -Adr | wc -l
