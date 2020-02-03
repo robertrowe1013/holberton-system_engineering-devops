@@ -1,2 +1,2 @@
 #!/bin/bash
-expot HOLBERTON="Betty"
+export HOLBERTON="Betty"
