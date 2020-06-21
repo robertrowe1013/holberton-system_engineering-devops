@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# This script shows minutes and hours
+
+for (( i = 0; i < 13; i++))
+do
+	echo "Hour: $i"
+	for (( i2 = 1; i2 < 60; i2++))
+	do
+		echo "$i2"
+	done
+done
