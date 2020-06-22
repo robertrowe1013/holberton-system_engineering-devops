@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# prints infinite loop
+
+i=0
+
+echo $$ > /var/run/holbertonscript.pid
+
+killit()
+{
+	echo "I hate the kill command"
+	rm /var/run/holbertonscript.pid
+}
+
+trap "rm /var/run/holbertonscript.pid" SIGQUIT
+trap killit SIGTERM
+trap "echo Y U no love me?!" SIGINT
+
+while ((i < 1))
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
