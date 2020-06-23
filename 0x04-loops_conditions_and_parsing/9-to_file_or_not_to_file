@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 # This script is displaying status of a file
 
-if test "holbertonschool"
+if [ -e holbertonschool ]
 then
 	echo "holbertonschool file exists"
-	if test -s "holbertonschool"
+	if [ -s holbertonschool ]
 	then
-		echo "holbertonschool file is empty"
-	else
 		echo "holbertonschool file is not empty"
+	else
+		echo "holbertonschool file is empty"
 	fi
-	if test -f "holbertonschool"
+	if [ -f holbertonschool ]
 	then
 		echo "holbertonschool is a regular file"
 	fi
