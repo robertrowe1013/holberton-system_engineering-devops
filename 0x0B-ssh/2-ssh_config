@@ -1,0 +1,5 @@
+Host 34.75.53.84
+    HostName gc-1653-web-01-1596432858
+    User ubuntu
+    IdentityFile ~/.ssh/holberton
+    PasswordAuthentication no
