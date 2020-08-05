@@ -4,6 +4,3 @@ sudo apt-get update -y
 sudo apt-get install nginx -y
 sudo chmod 777 /var/www/html/index.nginx-debian.html
 sudo echo "Holberton School" > /var/www/html/index.nginx-debian.html
-server {
-    listen  80;
-}
