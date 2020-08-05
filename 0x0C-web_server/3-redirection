@@ -4,6 +4,6 @@ sudo apt-get update -y
 sudo apt-get install nginx -y
 sudo chmod 777 /var/www/html/index.nginx-debian.html
 echo "Holberton School" > /var/www/html/index.nginx-debian.html
-red_string="location = 34.75.53.84/redirect_me/ {\nreturn 301 https://www.youtube.com/watch?v=-6b53mXQYT4;n}\n"
-sudo echo "$red_string" >> /etc/nginx/sites-available/default
+red_string="location = 34.75.53.84\/redirect_me\/ {\nreturn 301 https:\/\/www.youtube.com\/watch?v=-6b53mXQYT4;n}\n"
+echo "$red_string" >> /etc/nginx/sites-available/default
 sudo service nginx reload
