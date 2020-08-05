@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # redirect
+sudo apt-get update -y
+sudo apt-get install nginx -y
 server {
     server_name 34.75.53.84/redirect_me/
     return 301 $scheme://https://www.youtube.com/watch?v=-6b53mXQYT4$request_uri;
