@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# run nginx as nginx
+sudo sed -i "1auser nginx;" /etc/nginx/nginx.conf
+service nginxs start
