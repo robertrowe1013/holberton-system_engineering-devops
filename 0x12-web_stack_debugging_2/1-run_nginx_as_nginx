@@ -3,4 +3,5 @@
 sudo service apache2 stop
 sudo pkill apache2
 sudo sed -i "1auser nginx;" /etc/nginx/nginx.conf
-service nginx start
+sudo chmod -R 777 /etc/nginx/nginx.conf
+sudo -u nginx service nginx start
