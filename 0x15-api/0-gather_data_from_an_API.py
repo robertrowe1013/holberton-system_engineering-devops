@@ -16,7 +16,7 @@ def todo_list():
         if task.get("completed") is True:
             completed_tasks.append(task.get("title"))
     completed_tasks_count = len(completed_tasks)
-    print("{} is done with tasks({}/{}):".format(name,
+    print("Employee {} is done with tasks({}/{}):".format(name,
           completed_tasks_count, total_tasks_count))
     for task in completed_tasks:
         print("\t {}".format(task))
