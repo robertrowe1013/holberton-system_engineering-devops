@@ -8,7 +8,7 @@ def recurse(subreddit, hot_list=[]):
     """ recursively get hot list items """
     url = 'https://reddit.com/r/' + subreddit + '/hot/.json'
     h_list = requests.get(url, headers={'User-agent':
-                            'robertrowe1013'}).json().get('data')
+                          'robertrowe1013'}).json().get('data')
     if h_list is None:
         return None
     else:
