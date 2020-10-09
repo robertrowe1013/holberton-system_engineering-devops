@@ -1,6 +1,6 @@
 exec { 'fix_nginx':
   path    => ['/bin/', '/sbin/' , '/usr/bin/', '/usr/sbin/'],
-  command => 'echo ULIMIT=\" -n 4096\" >> /etc/default/nginx',
+  command => "sed -i '5c ULIMIT=\"-n 4096\"'"
 }
 exec { 'restart':
   provider => 'shell',
