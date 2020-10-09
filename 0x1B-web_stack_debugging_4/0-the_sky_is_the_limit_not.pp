@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# fixinx nginx
+# fix nginx
 exec { 'fix_nginx':
   path    => ['/bin/', '/sbin/' , '/usr/bin/', '/usr/sbin/'],
-  command => "sed -i '5c ULIMIT=\"-n 4096\"'"
+  command => "sed -i '5c ULIMIT=\"-n 4096\"' /etc/default/nginx"
 }
 exec { 'restart':
   provider => 'shell',
