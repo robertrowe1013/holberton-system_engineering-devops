@@ -1,7 +1,8 @@
 # fix nginx
-exec { 'fix_nginx':
-  command => "sed -i '5c ULIMIT=\"-n 4096\"' /etc/default/nginx",
-  path    => ['/bin/', '/sbin/' , '/usr/bin/', '/usr/sbin/']
+file {'/etc/default/nginx':
+  ensure  => present,
+  path    =>  '/etc/default/nginx',
+  content => 'ULIMIT="-n 4096"',
 }
 exec { 'restart':
   provider => 'shell',
